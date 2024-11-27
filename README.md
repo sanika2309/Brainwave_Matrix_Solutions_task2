@@ -1,71 +1,34 @@
 # Brainwave_Matrix_Solutions_task2
-# Password Strength Checker Tool
+# Password Strength Checker
 
-Welcome to the **Password Strength Checker Tool**! This tool allows users to assess the strength of passwords they enter based on criteria such as length, complexity, and uniqueness. Additionally, it includes a password generation feature to help users create strong passwords and a color-coded strength indicator for an intuitive experience.
+## Overview
 
-## Table of Contents
-- [Features](#features)
-- [Usage](#usage)
-- [How It Works](#how-it-works)
-- [Code Structure](#code-structure)
----
+This Python script evaluates the strength of a given password based on various criteria and provides feedback to improve password security. It checks for password length, character variety, common patterns, and sequences, offering suggestions for stronger passwords.
 
 ## Features
 
-1. **Password Strength Evaluation**:
-   - Checks for password length (minimum 12 characters).
-   - Evaluates complexity by verifying the presence of uppercase letters, lowercase letters, digits, and special characters.
-   - Analyzes common password patterns to encourage unique passwords.
-
-2. **Color-Coded Strength Bar**:
-   - Displays strength levels visually using colors (red, orange, yellow, and green) in a progress bar, making it easy to understand the strength at a glance.
-
-3. **Password Generator**:
-   - Generates strong passwords containing uppercase letters, lowercase letters, numbers, and special characters.
-   - Automatically displays the generated password in the password field.
-
-4. **Password Visibility Toggle**:
-   - Allows users to show or hide the password in the entry field, providing flexibility for copying and reviewing passwords.
+- **Length Check**: Scores based on password length.
+- **Character Variety**: Ensures inclusion of uppercase letters, lowercase letters, digits, and special characters.
+- **Common Patterns**: Flags common and easily guessable patterns.
+- **Sequential and Repeated Characters**: Identifies and warns against predictable sequences and repeated characters.
 
 ## Usage
 
-1. **Enter or Generate a Password**:
-   - Type a password manually into the "Enter Password" field.
-   - Or click on the **Generate Strong Password** button to automatically fill the field with a secure password.
+1. **Run the Script**: Execute the script using Python.
+    ```bash
+    python password_strength_checker.py
+    ```
 
-2. **Check Password Strength**:
-   - Click the **Check Strength** button to evaluate the password.
-   - The tool will provide feedback on the password's strength and display a color-coded strength indicator.
+2. **Enter Password**: When prompted, enter the password you wish to evaluate.
 
-3. **View Feedback and Strength Bar**:
-   - The feedback section will show specific suggestions on improving password strength if needed.
-   - The color-coded progress bar will visually indicate the strength level:
-     - **Red**: Very Weak
-     - **Orange**: Weak
-     - **Yellow**: Moderate
-     - **Green**: Strong
+3. **View Results**: The script will display the strength of the password and provide feedback for improvement.
 
-4. **Toggle Password Visibility**:
-   - Use the "Show Password" checkbox to view or hide the password as plain text.
+## Example
 
-## How It Works
+```bash
+Enter your password: P@ssw0rd123
+Password Strength: Moderate
+Suggestions for improvement:
+- Include at least one special character (e.g., !, @, #, $, etc.).
+- Avoid common patterns like 'password' or '1234'.
 
-The tool evaluates passwords using the following checks:
-- **Length**: Requires at least 12 characters for adequate strength.
-- **Complexity**: Verifies the inclusion of uppercase letters, lowercase letters, numbers, and special characters.
-- **Uniqueness**: Cross-references against a list of common passwords to ensure it’s not overly predictable.
-
-### Color-Coded Strength Indicator
-The progress bar updates based on the password score:
-- **0-2**: Very Weak (Red)
-- **3**: Weak (Orange)
-- **4**: Moderate (Yellow)
-- **5-6**: Strong (Green)
-
-These color codes make it easy for users to understand the password's strength level at a glance.
-
-## Code Structure
-
-- **password_checker.py**: Contains the main code for the Password Strength Checker Tool.
-- **requirements.txt**: Lists all necessary libraries for the project.
-- **README.md**: This file - an interactive documentation guide for the project.
